@@ -17,6 +17,9 @@ Below is a quick full example usage within a Laravel application that will allow
 You can pass in data to your view with the normal `->with()` method.
 
 ```php
+use Endor\MailSdk\EndorMail;
+...
+
 (new EndorMail(env('ENDOR_MAIL_KEY')))
     ->to(['info@endor.digital'])
     ->bcc(['bcc@endor.digital'])
@@ -29,6 +32,8 @@ You can pass in data to your view with the normal `->with()` method.
 If you want to use this package in an application that is not Laravel then you can use `file_get_contents` to get the content of the email:
 
 ```php
+use Endor\MailSdk\EndorMail;
+...
 (new EndorMail(env('ENDOR_MAIL_KEY')))
     ->to(['info@endor.digital'])
     ->bcc(['bcc@endor.digital'])

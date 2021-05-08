@@ -1,0 +1,26 @@
+{
+  "name": "jsefton/endor-mail-sdk",
+  "type": "library",
+  "description": "Endor Mail SDK",
+  "homepage": "https://endor.digital",
+  "license": "MIT",
+  "require": {
+    "ext-curl": "*"
+  },
+  "archive": {
+    "exclude": [
+      "/tests",
+      "tests",
+      "tests/*.*",
+      "phpunit.xml",
+      ".gitignore",
+      ".gitattributes",
+      "README.md"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "Endor\\MailSdk\\": "src/"
+    }
+  }
+}

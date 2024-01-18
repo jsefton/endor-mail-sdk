@@ -48,6 +48,9 @@ class EndorMail
      */
     public function send()
     {
+        if ($this->apiKey == '') {
+            return false;
+        }
         $request = curl_init(self::API_URL . self::API_ENDPOINT);
         $data = [
             'to' => $this->to,
